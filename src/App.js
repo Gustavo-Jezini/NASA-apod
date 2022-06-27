@@ -3,6 +3,7 @@ import React, { useEffect } from 'react';
 import { AuthContext } from './providers/auth';
 import axios from 'axios';
 import service from './service/config';
+import Rotas from './routes';
 
 function App() {
   const context = React.useContext(AuthContext)
@@ -26,9 +27,7 @@ function App() {
   
 
   return (
-    <div style={{color: context.user.color}} className="App">
-      Nasa Apod
-    </div>
+      <Rotas />
   );
 }
 
