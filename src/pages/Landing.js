@@ -1,8 +1,12 @@
 import React from 'react'
+import Header from '../components/Header/Header';
 
 const Landing = () => {
   return (
-    <div>Landing</div>
+    <main style={{height: '200vh'}}>
+      {/* Aqui vai o Header */}
+      <Header />
+    </main>
   )
 }
 

@@ -1,0 +1,32 @@
+.nav-header {
+  position: fixed;
+  height: 75px;
+  width: 100%;
+  font-family: 'Anek Latin', sans-serif;
+  font-size: 20px;
+  background-image: url('https://image.shutterstock.com/image-vector/cosmos-seamless-pattern-round-white-260nw-376557061.jpg');
+  background-color: #050003;
+  /* background-repeat: no-repeat; */
+  /* background-size: cover; */
+}
+
+.ul-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  color: azure;
+}
+
+.li-header {
+  margin: 20px;
+  list-style: none;
+  cursor: pointer;
+  background-color: rgba(10, 3, 16, 0.4);
+  padding: 15px;
+  border-radius: 30px;
+}
+
+.li-header:hover {
+  background-color: rgba(10, 3, 16, 0.93);
+}
