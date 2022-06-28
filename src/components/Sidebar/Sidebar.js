@@ -1,14 +1,15 @@
 import React, { useEffect } from 'react';
 import { AuthUse } from '../../providers/auth';
 import './Sidebar.css';
+import PerPeriod from './SideComponents/PerPeriod/PerPeriod';
 import SpecificDate from './SideComponents/SpecificDate/SpecificDate';
 
 const Sidebar = () => {
   const {dropdown: {option}, setDropdown} = AuthUse();
 
-  useEffect(() => 
-    console.log(option)
-  ,[option])
+  // useEffect(() => 
+  //   console.log(option)
+  // ,[option])
 
   const handleChange = (e) => {
     setDropdown({option: e.target.value})
@@ -21,7 +22,7 @@ const Sidebar = () => {
       case 'Specific date':
         return <SpecificDate />
       case 'Per period':
-        return <h1>Per period Option</h1>
+        return <PerPeriod />
       case 'oi':
         return <h1>Willian Butcher</h1>
       default:
