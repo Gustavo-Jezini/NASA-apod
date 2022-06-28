@@ -1,0 +1,8 @@
+.main-sidebar {
+  padding-top: 105px;
+}
+
+.section-btn-sidebar {
+  display: flex;
+  border: 1px solid black;
+}
