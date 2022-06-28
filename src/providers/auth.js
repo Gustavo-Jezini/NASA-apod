@@ -7,8 +7,17 @@ export const AuthProvider = (props) => {
     option: ''
   })
 
+  const [day, setDay] = useState({
+    specificDay: '',
+    startDate: '',
+    endDate: ''
+  })
+
   return (
-    <AuthContext.Provider value={{dropdown, setDropdown}}>
+    <AuthContext.Provider value={{
+      dropdown, setDropdown,
+      day, setDay
+      }}>
     {props.children}
     </ AuthContext.Provider>
   )

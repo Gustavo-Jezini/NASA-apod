@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { AuthUse } from '../../providers/auth';
 import './Sidebar.css';
+import SpecificDate from './SideComponents/SpecificDate/SpecificDate';
 
 const Sidebar = () => {
   const {dropdown: {option}, setDropdown} = AuthUse();
@@ -18,7 +19,7 @@ const Sidebar = () => {
       case '':
         return null;
       case 'Specific date':
-        return <h1>Specific Date Option</h1>
+        return <SpecificDate />
       case 'Per period':
         return <h1>Per period Option</h1>
       case 'oi':
