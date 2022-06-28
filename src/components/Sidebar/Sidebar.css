@@ -4,5 +4,26 @@
 
 .section-btn-sidebar {
   display: flex;
-  border: 1px solid black;
+  justify-content: space-evenly;
+}
+
+.section-1-sidebar {
+  display: flex;
+  margin-top: 10px;
+  margin-right: 10px;
+  justify-content: flex-end;
+}
+
+.section-2-sidebar {
+  display: flex;
+  margin-top: 10px;
+  justify-content: center;
+}
+
+.select-sidebar {
+  width: 50%;
+}
+
+
+.btn-sidebar {
 }

@@ -6,6 +6,7 @@
   font-size: 20px;
   background-image: url('https://image.shutterstock.com/image-vector/cosmos-seamless-pattern-round-white-260nw-376557061.jpg');
   background-color: #050003;
+  box-shadow: 0px 15px 10px rgba(134, 134, 158, 0.19);
   /* background-repeat: no-repeat; */
   /* background-size: cover; */
 }
