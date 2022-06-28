@@ -1,15 +1,12 @@
 import axios from 'axios';
-import React, { useEffect } from 'react';
+import React from 'react';
 import { AuthUse } from '../../../../providers/auth';
 import service from '../../../../service/config';
 import './SpecificDate.css';
 
 const SpecificDate = () => {
   const {day, setDay} = AuthUse();
-  const {nasaInfo, setNasaInfo} = AuthUse();
-  useEffect(() => 
-  console.log(nasaInfo), 
-  [nasaInfo])
+  const {setNasaInfo} = AuthUse();
 
   const handleChange = (e) => {
     setDay({startDate: '', endDate: '', specificDay: e.target.value})
@@ -23,7 +20,7 @@ const SpecificDate = () => {
       const { data } = await axios.get(urlToFetch);
       setNasaInfo([data]);
     } catch (error) {
-      console.log(error);
+      alert(error.response.data.msg)
     }
   }
 

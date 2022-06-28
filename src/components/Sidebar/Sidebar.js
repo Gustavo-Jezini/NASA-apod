@@ -1,15 +1,19 @@
+import axios from 'axios';
 import React, { useEffect } from 'react';
 import { AuthUse } from '../../providers/auth';
+import service from '../../service/config';
 import './Sidebar.css';
 import PerPeriod from './SideComponents/PerPeriod/PerPeriod';
 import SpecificDate from './SideComponents/SpecificDate/SpecificDate';
 
 const Sidebar = () => {
   const {dropdown: {option}, setDropdown} = AuthUse();
+  const {nasaInfo, setNasaInfo} = AuthUse();
 
-  // useEffect(() => 
-  //   console.log(option)
-  // ,[option])
+  useEffect(() => {
+    // refFunc.current()
+    console.log(nasaInfo);
+  }, [nasaInfo])
 
   const handleChange = (e) => {
     setDropdown({option: e.target.value})
@@ -30,6 +34,20 @@ const Sidebar = () => {
     }
   }
 
+  const handleClick = async () => {
+    const randomNumber = parseInt(Math.random() * 8) + 1;
+
+    const initialString = service.apiUrl;
+    const urlToFetch = `${initialString}count=${randomNumber}&api_key=gZzjJhflbq1i2Twhexw9PJCTT4v3Z57CbcTDhbh9`;
+
+    try {
+      const { data } = await axios.get(urlToFetch);
+      setNasaInfo(data);
+    } catch (error) {
+      alert(error.response.data.msg)
+    }
+  }
+
   return (
     <main className='main-sidebar'>
       <section className='section-btn-sidebar'>
@@ -43,6 +61,7 @@ const Sidebar = () => {
         <button 
           className="btn btn-dark btn-sidebar" 
           type="button"
+          onClick={() => handleClick()}
         >
            Random date
         </button>

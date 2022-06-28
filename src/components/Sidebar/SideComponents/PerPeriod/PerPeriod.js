@@ -26,7 +26,7 @@ const PerPeriod = () => {
       const { data } = await axios.get(urlToFetch);
       setNasaInfo(data);
     } catch (error) {
-      console.log(error);
+      alert(error.response.data.msg)
     }
   }
 
