@@ -1,5 +1,5 @@
 .nav-header {
-  position: fixed;
+  position: sticky;
   height: 75px;
   width: 100%;
   font-family: 'Anek Latin', sans-serif;

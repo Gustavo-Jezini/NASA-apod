@@ -1,15 +1,13 @@
 import axios from 'axios';
-import React, { useEffect } from 'react';
+import React from 'react';
 import { AuthUse } from '../../../../providers/auth';
 import service from '../../../../service/config';
 import './PerPeriod.css';
 
 const PerPeriod = () => {
   const {day, setDay} = AuthUse();
-  const {nasaInfo, setNasaInfo} = AuthUse();
+  const {setNasaInfo} = AuthUse();
 
-  useEffect(() => console.log(nasaInfo) ,[nasaInfo])
-  
   const handleChange = (e) => {
     if (e.target.name === 'start') {
       setDay({...day, startDate: e.target.value, specificDay: ''})

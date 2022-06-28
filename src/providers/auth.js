@@ -21,7 +21,7 @@ export const AuthProvider = (props) => {
     
     try {
       const { data } = await axios.get(urlToFetch);
-      setNasaInfo(data);
+      setNasaInfo([data]);
       } catch (error) {
         alert(error.response.data.msg)
       }
